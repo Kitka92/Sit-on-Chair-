@@ -7,7 +7,6 @@ header {
   color: white;
   text-transform: uppercase;
   padding: 5px;
-  
 }
 
 .container {
@@ -17,7 +16,7 @@ header {
   padding: 5px;
 }
 
-p {
+p.logo {
   float: left;
 }
 
@@ -45,4 +44,69 @@ span {
   color: #4BC3A9;
 }
 
+.firstSection {
+  background-image: -webkit-linear-gradient(top, #eeeeee 43%,#cccccc 78%);;
+}
 
+.section1 div {
+  float: left;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.slider {
+  font-size: 50px;
+  display: block;
+  margin-top: 120px;
+  color: #4BC3A9;
+}
+
+.chair {
+  width: 40%;
+}
+
+div.chair {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-top: 40px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+p.nextToChair {
+  text-align: center;
+  overflow: auto;
+  line-height: 1.5;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  position: absolute;
+  left: 100px;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #4BC3A9;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.slider.right {
+  padding-left: 150px;
+  width: 15%;
+}
+
+.slider.left {
+  width: 5%;
+}

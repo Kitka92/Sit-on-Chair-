@@ -1,3 +1,48 @@
 html {
   font-family: 'Raleway', sans-serif;
 }
+
+header {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px;
+  
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  border: 1px solid red;
+  padding: 5px;
+}
+
+p {
+  float: left;
+}
+
+ul.menu {
+  float: right;
+}
+
+.menu li {
+  float: left;
+  margin-right: 30px;
+}
+
+.menu li:last-child {
+  margin-right: 0px;
+}
+
+/*
+.submenu {
+  clear: both;
+  position: relative;
+  width: 130px
+}
+*/
+span {
+  color: #4BC3A9;
+}
+
+

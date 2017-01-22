@@ -244,6 +244,7 @@ p.nextToImgs {
 p.price {
   margin-top: 50px;
   text-transform: uppercase;
+  font-size: 20px;
   font-weight: bold;
   position: relative;
   padding: 10px;
@@ -280,7 +281,7 @@ p.price {
   border: 1px solid grey;
   position: relative;
   left: 43%;
-  bottom: 50px;
+  bottom: 30px;
   border-radius: 50px;
 }
 
@@ -298,9 +299,10 @@ p.price {
   text-align: center;
   color: #4BC3A9;
   font-size: 20px;
-  margin-top: -30px;
+  margin-top: -20px;
   margin-bottom: 50px;
-  font-weight: bold;
+  
+  font-size: 23px;
 }
 
 .bigCircle {
@@ -361,4 +363,39 @@ p.price {
   padding: 5px 30px 5px 30px;
   color: white;
   background-color: #4BC3A9
+}
+
+/* SECTION 4 */
+
+.section4 {
+  margin-top: 5px;
+  
+}
+
+form {
+  display: inline-block;
+  margin-left: 5px;
+  width: 700px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 700px;
+}
+
+.price.contact {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  padding: 10px;
+  width: 700px;
+}
+
+::-webkit-input-placeholder {
+  color: #D3C2EB;
+  font-size: 20px;
 }

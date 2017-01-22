@@ -10,7 +10,7 @@
 @font-face {
     font-family: 'ralewayregular';
     src: url('../fonts/raleway-regular.woff2') format('woff2'),
-         url('raleway-regular.woff') format('woff');
+         url('../fonts/raleway-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -19,14 +19,14 @@
 @font-face {
     font-family: 'ralewaysemibold';
     src: url('../fonts/raleway-semibold.woff2') format('woff2'),
-         url('raleway-semibold.woff') format('woff');
+         url('..fonts/raleway-semibold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 html {
-  font-family: 'Raleway', sans-serif;
+  font-family: Raleway, sans-serif;
 }
 
 /* HEADER */
@@ -151,7 +151,7 @@ p.nextToChair {
   margin-bottom: 10px;
 }
 
-button {
+.button1 {
   position: absolute;
   left: 100px;
   text-transform: uppercase;
@@ -261,10 +261,11 @@ p.price {
 }
 
 .plan {
-  border: 1px solid green;
+  border: 1px solid grey;
   width: 329px;
   position: relative;
   margin-right: 100px;
+  background-color: #F5F4FB;
 }
 
 .plan:last-child {
@@ -274,7 +275,7 @@ p.price {
 .topCircle {
   width: 50px;
   height: 50px;
-  border: 1px solid blue;
+  border: 1px solid grey;
   position: relative;
   left: 43%;
   bottom: 50px;
@@ -282,7 +283,7 @@ p.price {
 }
 
 .lilCircle {
-  border: 1px solid red;
+  background-color: grey; 
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -294,6 +295,7 @@ p.price {
 .basicPlan {
   text-align: center;
   color: #4BC3A9;
+  font-size: 20px;
   margin-top: -30px;
   margin-bottom: 50px;
   font-weight: bold;
@@ -304,18 +306,22 @@ p.price {
   left: 31%;
   width: 130px;
   height: 130px;
-  border: 1px solid black;
+  border: 1px solid grey;
   border-radius: 50%;
   text-align: center;
+  margin-bottom: 30px;
 }
 .bigCircle>span {
   font-size: 40px;
   position: relative;
   top: 40px;
+  color: grey;
 }
 
 .bigCircle>sup {
   font-size: 15px;
+  font-weight: bold;
+  color: grey;
   position: relative;
   top: 15px;
 }
@@ -324,3 +330,22 @@ p.price {
   font-size: 15px !important;
 }
 
+.options {
+  text-align: center;
+  line-height: 2;
+  color: grey;
+  font-size: 20px;
+}
+
+.button2 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 5px 30px 5px 30px;
+  color: white;
+  background-color: #4BC3A9
+}

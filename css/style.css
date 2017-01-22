@@ -381,7 +381,7 @@ form {
 input {
   display: block;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 15px;
   width: 700px;
 }
 
@@ -391,11 +391,50 @@ input {
 }
 
 textarea {
-  padding: 10px;
+  padding: 15px;
   width: 700px;
 }
 
 ::-webkit-input-placeholder {
   color: #D3C2EB;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+.red {
+  border: 1px solid green;
+  display: inline-block;
+  vertical-align: top;
+  width: 470px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.ok {
+  float: right;
+  position: relative;
+  bottom: 200px;
+  right: 90px;
+}
+
+.agree {
+  display: inline-block;
+  padding: 10px;
+  color: #D3C2EB;
+}
+
+.ok>img {
+  border: 1px solid #4BC3A9;
+}
+
+.button3 {
+  float: right;
+  position: relative;
+  left: 210px;
+  bottom: 100px;
+  color: white;
+  background-color: #4BC3A9;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 10px 100px 10px 100px;
 }

@@ -29,6 +29,8 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+/* HEADER */
+
 header {
   background-color: black;
   color: white;
@@ -43,7 +45,7 @@ header {
   padding: 5px;
 }
 
-p.logo, .section2elements {
+p.logo, .section2elements, .plan {
   float: left;
 }
 
@@ -98,6 +100,8 @@ span {
   color: #4BC3A9;
   font-weight: bold;
 }
+
+/* SECTION 1 */
 
 .firstSection {
   background-image: -webkit-linear-gradient(top, #eeeeee 43%,#cccccc 78%);
@@ -171,16 +175,21 @@ button {
   width: 5%;
 }
 
+/* SECTION 2 */
+
 .section2 {
   padding: 5px;
+  margin-top: 20px;
+  padding-bottom: 80px;
 }
 .section2elements {
-  margin-right: 40px;
+  margin-right: 100px;
+  position: relative;
 }
 
 .section2elements:last-child {
   margin-right: 0;
-  width: 440px;
+  width: 329px;
   border: 1px solid grey;
   padding-left: 10px;
 }
@@ -200,10 +209,118 @@ h2::after {
   bottom: 8px;
   left: 15px;
   right: 0;
-  border: 3.5px solid #23CAA5;
+  border: 3.5px solid #4BC3A9;
 }
 
 p.nextToImgs {
   line-height: 1.5;
   padding: 15px;
 }
+
+.clair {
+  position: absolute;
+  bottom: 20px;
+  width: 329px;
+  padding: 20px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.clair::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: 180px;
+  border: 3.5px solid #4BC3A9;
+  width: 135px;
+}
+
+/* SECTION 3 */
+
+.section3 {
+  background-color: #EFE8F7;
+}
+
+p.price {
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 80px;
+}
+
+.price::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+  width: 330px;
+  border: 3.5px solid #4BC3A9;
+  
+}
+
+.plan {
+  border: 1px solid green;
+  width: 329px;
+  position: relative;
+  margin-right: 100px;
+}
+
+.plan:last-child {
+  margin-right: 0;
+}
+
+.topCircle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid blue;
+  position: relative;
+  left: 43%;
+  bottom: 50px;
+  border-radius: 50px;
+}
+
+.lilCircle {
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 11px;
+  top: 12px;
+}
+
+.basicPlan {
+  text-align: center;
+  color: #4BC3A9;
+  margin-top: -30px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.bigCircle {
+  position: relative;
+  left: 31%;
+  width: 130px;
+  height: 130px;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+}
+.bigCircle>span {
+  font-size: 40px;
+  position: relative;
+  top: 40px;
+}
+
+.bigCircle>sup {
+  font-size: 15px;
+  position: relative;
+  top: 15px;
+}
+
+.pln {
+  font-size: 15px !important;
+}
+

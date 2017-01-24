@@ -26,7 +26,7 @@
 }
 
 html {
-  font-family: Raleway, sans-serif;
+  font-family: "ralewayregular", sans-serif;
 }
 
 /* HEADER */
@@ -301,7 +301,6 @@ p.price {
   font-size: 20px;
   margin-top: -20px;
   margin-bottom: 50px;
-  
   font-size: 23px;
 }
 
@@ -319,7 +318,7 @@ p.price {
 .bigCircle>span {
   font-size: 40px;
   position: relative;
-  top: 40px;
+  top: 30px;
   color: grey;
 }
 
@@ -328,7 +327,7 @@ p.price {
   font-weight: bold;
   color: grey;
   position: relative;
-  top: 15px;
+  top: 10px;
 }
 
 .pln {
@@ -437,4 +436,38 @@ textarea {
   text-transform: uppercase;
   border-radius: 10px;
   padding: 10px 100px 10px 100px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+
+.foot {
+  float: left;
+  padding: 10px;
+  color: #62748D;
+  font-weight: bold;
+}
+
+.logos, .bottom {
+  float: right;
+}
+
+.bottom {
+  padding: 10px;
+  color: #62748D;
+  font-weight: bold;
+}
+
+.bottom > span {
+  color: #62748D;
+  font-weight: bold;
+}
+
+.logos {
+  margin-right: 60px;
 }

@@ -82,6 +82,10 @@ a {
   font-family: 'ralewayregular', sans-serif;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .arrow {
   position: absolute;
   top: 42px;
@@ -91,9 +95,6 @@ a {
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid black;
-}
-
-.menu li:first-child {
 }
 
 span {

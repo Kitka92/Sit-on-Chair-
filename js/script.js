@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  
+  console.log("DOM");
+
 // SUBMENU
   var oFirmie = document.querySelector(".menu li:first-child");
   var arrow = document.querySelector(".arrow");
@@ -8,13 +9,19 @@ document.addEventListener("DOMContentLoaded", function() {
   arrow.classList.add("hidden");
   submenu.classList.add("hidden");
   
-  oFirmie.addEventListener("mouseover", function() {
+  oFirmie.addEventListener("mouseenter", function() {
       arrow.classList.remove("hidden");
       submenu.classList.remove("hidden");
-  });
+  }); 
+  
+  oFirmie.addEventListener("mouseleave", function() {
+      arrow.classList.add("hidden");
+      submenu.classList.add("hidden");
+  }); 
+  
   
 // CENNIK
-  
+  /*
   var plan = document.querySelectorAll(".plan");
   var topCircle = document.querySelectorAll(".topCircle");
   var lilCircle = document.querySelectorAll(".lilCircle");
@@ -27,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   for (var i = 0; i < plan.length; i++) {
     plan[i].addEventListener("click", function() {
-      topCircle[i].style.backgroundColor = "pink";
+      topCircle.style.backgroundColor = "pink";
     });
   }
+  */
 });

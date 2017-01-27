@@ -41,7 +41,6 @@ header {
 .container {
   margin: 0 auto;
   width: 1200px;
-  border: 1px solid red;
   padding: 5px;
 }
 
@@ -83,7 +82,7 @@ a {
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .arrow {
@@ -284,6 +283,7 @@ p.price {
   left: 43%;
   bottom: 30px;
   border-radius: 50px;
+  background-color: white;
 }
 
 .lilCircle {
@@ -300,6 +300,7 @@ p.price {
   text-align: center;
   color: #4BC3A9;
   font-size: 20px;
+  font-weight: bold;
   margin-top: -20px;
   margin-bottom: 50px;
   font-size: 23px;
@@ -365,6 +366,44 @@ p.price {
   background-color: #4BC3A9
 }
 
+.topCircle.p2 {
+  background-color: #4BC3A9;
+  border: none;
+}
+
+.lilCircle.p2 {
+  background-color: white;
+}
+
+.plan.p2 {
+  background-color: #4BC3A9;
+}
+
+.basicPlan.p2 {
+  color: white;
+}
+
+.bigCircle.p2>span {
+  color: #4BC3A9;
+}
+
+.bigCircle.p2>sup {
+  color: #4BC3A9;
+}
+
+.options.p2:nth-child(even) {
+  background-color: white;
+}
+
+.options.p2:nth-child(2n+1) {
+  background-color: #E9F3F2;
+}
+
+.button2.p2 {
+  background-color: white;
+  color: #4BC3A9;
+}
+
 /* SECTION 4 */
 
 .section4 {
@@ -401,7 +440,6 @@ textarea {
 }
 
 .red {
-  border: 1px solid green;
   display: inline-block;
   vertical-align: top;
   width: 470px;
@@ -466,7 +504,7 @@ footer {
 
 .bottom > span {
   color: #62748D;
-  font-weight: bold;
+  font-family: 'ralewaybold';
 }
 
 .logos {

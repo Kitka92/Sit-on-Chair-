@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
   submenu.classList.add("hidden");
   
   oFirmie.addEventListener("mouseenter", function() {
-    console.log("mouseover");
       arrow.classList.remove("hidden");
       submenu.classList.remove("hidden");
   }); 
@@ -19,5 +18,23 @@ document.addEventListener("DOMContentLoaded", function() {
       arrow.classList.add("hidden");
       submenu.classList.add("hidden");
   }); 
+  
+// CHAIRS
+    
+  var pictures = document.querySelectorAll(".pic");
+  
+  for (var i = 0; i < pictures.length; i++) {
+    pictures[i].addEventListener("mouseenter", function() {
+      var clairs = this.children[1];
+      clairs.style.display = "none";
+    });
+  }
+  
+  for (var j = 0; j < pictures.length; j++) {
+    pictures[j].addEventListener("mouseleave", function() {
+      var clairs = this.children[1];
+      clairs.style.display = "block";
+    });
+  }
   
 });

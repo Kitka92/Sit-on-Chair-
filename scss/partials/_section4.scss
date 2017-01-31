@@ -1,0 +1,75 @@
+/* SECTION 4 */
+
+.section4 {
+  margin-top: 5px;
+  
+}
+
+form {
+  display: inline-block;
+  margin-left: 5px;
+  width: 700px;
+}
+
+input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 700px;
+  @include box-shadow(#E4E4E4)
+}
+
+.price.contact {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  padding: 15px;
+  width: 700px;
+  @include box-shadow(#E4E4E4);
+}
+
+::-webkit-input-placeholder {
+  color: #D3C2EB;
+  font-size: 25px;
+}
+
+.red {
+  display: inline-block;
+  vertical-align: top;
+  width: 470px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.ok {
+  float: right;
+  position: relative;
+  bottom: 200px;
+  right: 90px;
+}
+
+.agree {
+  display: inline-block;
+  padding: 10px;
+  color: #D3C2EB;
+}
+
+.ok>img {
+  border: 1px solid $mint;
+}
+
+.button3 {
+  float: right;
+  position: relative;
+  left: 210px;
+  bottom: 100px;
+  color: white;
+  background-color: #4BC3A9;
+  font-size: 30px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  padding: 10px 100px 10px 100px;
+  @include scale
+}

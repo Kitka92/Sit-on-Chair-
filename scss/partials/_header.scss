@@ -1,0 +1,81 @@
+@import "partials/variables";
+
+/* HEADER */
+
+header {
+  background-color: $background-header;
+  color: $color-header;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding: 5px;
+}
+
+p.logo, .section2elements, .plan {
+  float: left;
+}
+
+ul.menu {
+  float: right;
+}
+
+.menu li {
+  float: left;
+  margin-right: 30px;
+}
+
+.menu li:last-child {
+  margin-right: 0px;
+}
+
+.menu li:first-child {
+  position: relative;
+}
+
+.menu {
+  a {
+  text-decoration: none;
+  color: $color-header;
+    &:hover {
+    color: $mint;
+    font-weight: bold;
+    }
+  }
+}
+
+.submenu {
+  clear: both;
+  position: absolute;
+  top: 50px;
+  width: 130px;
+  color: $color-header;
+  line-height: 1.5;
+  background-color: $background-header;
+  padding: 10px;
+  text-transform: none;
+  font-family: 'ralewayregular', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 42px;
+  right: 370px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid black;
+}
+
+span {
+  color: $mint;
+  font-weight: bold;
+}

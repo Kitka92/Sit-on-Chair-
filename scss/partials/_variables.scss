@@ -1,0 +1,23 @@
+/* COLORS */
+
+$background-header: #000;
+$color-header: #FFF;
+$mint: #4BC3A9;
+$section3-background-color: #F1F1F1;
+$plan-background-color: #F9F9F9;
+
+/* MIXINS */
+
+@mixin scale {
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+@mixin box-shadow($color) {
+  &:focus {
+      -moz-box-shadow: 0 0 15px $color inset;
+      -webkit-box-shadow: 0 0 15px $color inset;
+      box-shadow: 0 0 15px $color inset;
+  }
+}

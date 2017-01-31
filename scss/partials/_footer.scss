@@ -1,0 +1,33 @@
+/* FOOTER */
+
+footer {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+}
+
+.foot {
+  float: left;
+  padding: 10px;
+  color: #62748D;
+  font-weight: bold;
+}
+
+.logos, .bottom {
+  float: right;
+}
+
+.bottom {
+  padding: 10px;
+  color: #62748D;
+  font-weight: bold;
+}
+
+.bottom > span {
+  color: #62748D;
+  font-family: 'ralewaybold';
+}
+
+.logos {
+  margin-right: 60px;
+}

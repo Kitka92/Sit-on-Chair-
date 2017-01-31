@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   submenu.classList.add("hidden");
   
   oFirmie.addEventListener("mouseenter", function() {
+    console.log("mouseover");
       arrow.classList.remove("hidden");
       submenu.classList.remove("hidden");
   }); 

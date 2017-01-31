@@ -148,6 +148,7 @@ p.price {
   color: white;
   background-color: $mint;
   @include scale
+  @include button-font
 }
 
 .topCircle.p2 {

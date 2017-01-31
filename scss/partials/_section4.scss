@@ -65,7 +65,8 @@ textarea {
   position: relative;
   left: 210px;
   bottom: 100px;
-  color: white;
+  color: $color-header;
+  @include button-font
   background-color: #4BC3A9;
   font-size: 30px;
   text-transform: uppercase;

@@ -5,6 +5,7 @@ $color-header: #FFF;
 $mint: #4BC3A9;
 $section3-background-color: #F1F1F1;
 $plan-background-color: #F9F9F9;
+$background-calculator: #f9f9f9;
 
 /* MIXINS */
 
@@ -20,4 +21,9 @@ $plan-background-color: #F9F9F9;
       -webkit-box-shadow: 0 0 15px $color inset;
       box-shadow: 0 0 15px $color inset;
   }
+}
+
+@mixin button-font {
+  font-family: 'ralewayregular', sans-serif;
+  font-weight: bold;
 }

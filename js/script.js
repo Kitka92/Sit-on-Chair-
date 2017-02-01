@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       arrow.classList.add("hidden");
       submenu.classList.add("hidden");
   }); 
-  
+
 // CHAIRS
     
   var pictures = document.querySelectorAll(".pic");
@@ -65,5 +65,31 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     imgs[index].classList.add("visible");
   });
+  
+// CALCULATOR
+
+// DROP-DOWN LISTS
+  
+  var arrowCalc = document.querySelectorAll(".list_arrow");
+  
+  var listPanel = document.querySelectorAll(".list_panel");
+  
+  console.log(arrowCalc, listPanel);
+
+  for (var k = 0; k < arrowCalc.length; k++) {
+	arrowCalc[k].addEventListener("click", function() {
+      
+      var next = this.nextElementSibling;
+      
+      if (next.style.display === "none") {
+          next.style.display = "block";
+      } else {
+          next.style.display = "none";
+        }
+      
+    });
+}
+  
+
   
 });

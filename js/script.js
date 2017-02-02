@@ -93,105 +93,64 @@ document.addEventListener("DOMContentLoaded", function() {
 // SUM
   
   var options = document.querySelectorAll("[data-price]");
-  //console.log(options);
-    
-  var typeOfChair = document.querySelector(".list_panel");
-  //console.log(typeOfChair);
-      
-  var typeOfChairChildren = typeOfChair.children;
-  //console.log(typeOfChairChildren);
-      
-  var title = document.querySelector(".title");
-  //console.log(title);
+ 
+  var listPanel = document.querySelector(".list_panel");
+  var chairTypes = listPanel.children;
   
-  var titleValue = document.querySelector(".title.value");
-  //console.log(titleValue);
+  var colors = document.querySelectorAll(".list_panel.colors li");
+  var patterns = document.querySelectorAll(".list_panel.patterns li");
   
-  var colors = document.querySelector(".colors");
-  //console.log(colors);
-  
-  var colorsChildren = colors.children;
-  //console.log(colorsChildren);
-  
-  var color = document.querySelector(".color");
-  //console.log(color);
-  
-  var colorValue = document.querySelector(".color.value");
-  //console.log(colorValue);
-  
-  var patterns = document.querySelector(".patterns");
-  //console.log(patterns);
-  
-  var pattern = document.querySelector(".pattern")
-  //console.log(pattern);
-  
-  var patternsChildren = patterns.children;
-  //console.log(patternsChildren);
-  
-  var patternsValue = document.querySelector(".pattern.value");
-  //console.log(patternsValue);
-  
-  var checkbox = document.querySelector("#transport");
-  //console.log(checkbox);
-  
-  var transport = document.querySelector(".transport");
-  //console.log(transport);
-  
-  var transportValue = document.querySelector(".transport.value");
-  //console.log(transportValue);
+  var panelLeft = document.querySelector(".panel_left");
   
   var panelRight = document.querySelector(".panel_right");
-  //console.log(panelRight);
   
-  var panelRightValues = panelRight.children;
-  //console.log(panelRightValues);
+  var checkbox = document.querySelector("#transport");
   
   var conclusion = document.querySelector(".sum");
-  //console.log(conclusion);
-  
-      
-  for (var i = 0; i < typeOfChairChildren.length; i++) {
-    typeOfChairChildren[i].addEventListener("click", function() {
-      
-      title.innerText = this.innerText;
-      titleValue.innerText = this.dataset.price;
+ 
+  for (var i = 0; i < chairTypes.length; i++) {
+    chairTypes[i].addEventListener("click", function() {
+      panelLeft.children[0].innerText = this.innerText;
+      panelRight.children[0].innerText = this.dataset.price;
     });
   }
   
-  for (var i = 0; i < colorsChildren.length; i++) {
-    colorsChildren[i].addEventListener("click", function() {
-      color.innerText = this.innerText;
-      colorValue.innerText = this.dataset.price;
+  for (var i = 0; i < colors.length; i++) {
+    colors[i].addEventListener("click", function() {
+      panelLeft.children[1].innerText = this.innerText;
+      panelRight.children[1].innerText = this.dataset.price;
     });
   }
   
-  for (var i = 0; i < patternsChildren.length; i++) {
-    patternsChildren[i].addEventListener("click", function() {
-      pattern.innerText = this.innerText;
-      patternsValue.innerText = this.dataset.price;
+  for (var i = 0; i < patterns.length; i++) {
+    patterns[i].addEventListener("click", function() {
+      panelLeft.children[2].innerText = this.innerText;
+      panelRight.children[2].innerText = this.dataset.price;
     });
   }
   
   checkbox.addEventListener("change", function() {
     if (checkbox.checked) {
-      transport.innerText = "Transport";
-      transportValue.innerText = this.dataset.price;
+      panelLeft.children[3].innerText = "Transport";
+      panelRight.children[3].innerText = this.dataset.price;
     } else {
-      transportValue.innerText = "0";
+      panelLeft.children[3].innerText = "Transport";
+      panelRight.children[3].innerText = 0;
     }
   });
-
+  
   function calculatePrice() {
     var sum = 0;
-    if (panelRightValues.innerText !== "") {
-      for (var i = 0; i < panelRightValues.length; i++) {
-        sum += parseInt(panelRightValues[i].innerText);
+    for (var i = 0; i < panelRight.children.length; i++) {
+     if (panelRight.children[i].innerText !== "") {
+        sum += parseFLoat(panelRight.children[i].innerText);
+      } else {
+        sum = 0;
       }
-    } else {
-      sum = 0;
-      }
+    }
     conclusion.innerText = sum + "zł";
   }
+  
   calculatePrice();
-    
+  
 });

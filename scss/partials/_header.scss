@@ -40,10 +40,11 @@ ul.menu {
   a {
   text-decoration: none;
   color: $color-header;
+  transition: color 500ms;
     &:hover {
     color: $mint;
     font-weight: bold;
-    transition: color 2s;
+    
     }
   }
 }

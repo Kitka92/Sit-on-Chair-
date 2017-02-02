@@ -43,6 +43,7 @@ ul.menu {
     &:hover {
     color: $mint;
     font-weight: bold;
+    transition: color 2s;
     }
   }
 }
@@ -67,7 +68,6 @@ ul.menu {
 .arrow {
   position: absolute;
   top: 42px;
-  right: 370px;
   width: 0;
   height: 0;
   border-left: 15px solid transparent;

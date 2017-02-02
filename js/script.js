@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
-  for (var j = 0; j < pictures.length; j++) {
-    pictures[j].addEventListener("mouseleave", function() {
+  for (var i = 0; i < pictures.length; i++) {
+    pictures[i].addEventListener("mouseleave", function() {
       var clairs = this.children[1];
       clairs.style.display = "block";
     });
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var index = 0;
   
   var imgs = document.querySelectorAll(".slide li");
-  console.log(imgs);
+  //console.log(imgs);
   
   imgs[index].classList.add("visible");
   
@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
   var listPanel = document.querySelectorAll(".list_panel");
   
-  console.log(arrowCalc, listPanel);
+  //console.log(arrowCalc, listPanel);
 
-  for (var k = 0; k < arrowCalc.length; k++) {
-	arrowCalc[k].addEventListener("click", function() {
+  for (var i = 0; i < arrowCalc.length; i++) {
+	arrowCalc[i].addEventListener("click", function() {
       
       var next = this.nextElementSibling;
       
@@ -90,6 +90,108 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 }
   
-
+// SUM
   
+  var options = document.querySelectorAll("[data-price]");
+  //console.log(options);
+    
+  var typeOfChair = document.querySelector(".list_panel");
+  //console.log(typeOfChair);
+      
+  var typeOfChairChildren = typeOfChair.children;
+  //console.log(typeOfChairChildren);
+      
+  var title = document.querySelector(".title");
+  //console.log(title);
+  
+  var titleValue = document.querySelector(".title.value");
+  //console.log(titleValue);
+  
+  var colors = document.querySelector(".colors");
+  //console.log(colors);
+  
+  var colorsChildren = colors.children;
+  //console.log(colorsChildren);
+  
+  var color = document.querySelector(".color");
+  //console.log(color);
+  
+  var colorValue = document.querySelector(".color.value");
+  //console.log(colorValue);
+  
+  var patterns = document.querySelector(".patterns");
+  //console.log(patterns);
+  
+  var pattern = document.querySelector(".pattern")
+  //console.log(pattern);
+  
+  var patternsChildren = patterns.children;
+  //console.log(patternsChildren);
+  
+  var patternsValue = document.querySelector(".pattern.value");
+  //console.log(patternsValue);
+  
+  var checkbox = document.querySelector("#transport");
+  //console.log(checkbox);
+  
+  var transport = document.querySelector(".transport");
+  //console.log(transport);
+  
+  var transportValue = document.querySelector(".transport.value");
+  //console.log(transportValue);
+  
+  var panelRight = document.querySelector(".panel_right");
+  //console.log(panelRight);
+  
+  var panelRightValues = panelRight.children;
+  //console.log(panelRightValues);
+  
+  var conclusion = document.querySelector(".sum");
+  //console.log(conclusion);
+  
+      
+  for (var i = 0; i < typeOfChairChildren.length; i++) {
+    typeOfChairChildren[i].addEventListener("click", function() {
+      
+      title.innerText = this.innerText;
+      titleValue.innerText = this.dataset.price;
+    });
+  }
+  
+  for (var i = 0; i < colorsChildren.length; i++) {
+    colorsChildren[i].addEventListener("click", function() {
+      color.innerText = this.innerText;
+      colorValue.innerText = this.dataset.price;
+    });
+  }
+  
+  for (var i = 0; i < patternsChildren.length; i++) {
+    patternsChildren[i].addEventListener("click", function() {
+      pattern.innerText = this.innerText;
+      patternsValue.innerText = this.dataset.price;
+    });
+  }
+  
+  checkbox.addEventListener("change", function() {
+    if (checkbox.checked) {
+      transport.innerText = "Transport";
+      transportValue.innerText = this.dataset.price;
+    } else {
+      transportValue.innerText = "0";
+    }
+  });
+
+  function calculatePrice() {
+    var sum = 0;
+    if (panelRightValues.innerText !== "") {
+      for (var i = 0; i < panelRightValues.length; i++) {
+        sum += parseInt(panelRightValues[i].innerText);
+      }
+    } else {
+      sum = 0;
+      }
+    conclusion.innerText = sum + "zł";
+  }
+  calculatePrice();
+    
 });

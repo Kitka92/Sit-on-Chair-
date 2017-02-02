@@ -79,9 +79,9 @@ p.price {
   text-align: center;
   margin-bottom: 30px;
   background-color: $color-header;
-  animation: rotation 4s infinite linear;
+  animation: swing 3s infinite linear;
 }
-
+/*
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -97,6 +97,25 @@ p.price {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+*/
+
+@keyframes swing {
+  0% {
+    transform: rotate(-30deg);
+  } 
+  20% {
+    transform: scale(0.95);
+  }
+  50% { 
+    transform: rotate(30deg); 
+  }
+  80% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: rotate(-30deg);
   }
 }
 

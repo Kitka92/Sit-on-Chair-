@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   arrow.classList.add("hidden");
   submenu.classList.add("hidden");
   
+  // events for hover - submenu
   oFirmie.addEventListener("mouseenter", function() {
       arrow.classList.remove("hidden");
       submenu.classList.remove("hidden");
@@ -17,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
   oFirmie.addEventListener("mouseleave", function() {
       arrow.classList.add("hidden");
       submenu.classList.add("hidden");
-  }); 
+  });
 
 // CHAIRS
     
   var pictures = document.querySelectorAll(".pic");
   
+  //events for hover - pictures in section 2
   for (var i = 0; i < pictures.length; i++) {
     pictures[i].addEventListener("mouseenter", function() {
       var clairs = this.children[1];
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
-// SLIDER section1
+// SLIDER
   var index = 0;
   
   var imgs = document.querySelectorAll(".slide li");
@@ -48,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var next = document.querySelector(".slider.right");
   var prev = document.querySelector(".slider.left");
   
+  // event for slider on the right side
   next.addEventListener("click", function() {
     imgs[index].classList.remove("visible");
     index++;
@@ -57,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     imgs[index].classList.add("visible");
   });
   
+  // event for slider on the left side
   prev.addEventListener("click", function() {
     imgs[index].classList.remove("visible");
     index--;
@@ -74,11 +78,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
   var listPanel = document.querySelectorAll(".list_panel");
   
-  //console.log(arrowCalc, listPanel);
-
+  // event for drop-down the drop-down list
   for (var i = 0; i < arrowCalc.length; i++) {
-	arrowCalc[i].addEventListener("click", function() {
-      
+	arrowCalc[i].addEventListener("click", function(event) {
+      //event.stopImmediatePropagation();
       var next = this.nextElementSibling;
       
       if (next.style.display === "none") {
@@ -88,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       
     });
-}
+  }
   
 // SUM
   
@@ -96,6 +99,9 @@ document.addEventListener("DOMContentLoaded", function() {
  
   var listPanel = document.querySelector(".list_panel");
   var chairTypes = listPanel.children;
+  
+  var listPanelAll = document.querySelectorAll(".list_panel")
+  console.log(listPanelAll);
   
   var colors = document.querySelectorAll(".list_panel.colors li");
   var patterns = document.querySelectorAll(".list_panel.patterns li");
@@ -108,6 +114,18 @@ document.addEventListener("DOMContentLoaded", function() {
   
   var conclusion = document.querySelector(".sum");
  
+  
+  //event for options from drop-down list
+  // if you click on it, the whole list won't be visible anymore
+  for (var i = 0; i < options.length; i++) {
+    options[i].addEventListener("click", function() {
+      for (var j = 0; j < listPanelAll.length; j++) {
+        listPanelAll[j].style.display = "none";
+      }
+    });
+  }
+  
+  // event for choosing a type of chair and its price
   for (var i = 0; i < chairTypes.length; i++) {
     chairTypes[i].addEventListener("click", function() {
       panelLeft.children[0].innerText = this.innerText;
@@ -115,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
+  // event for choosing a color and its price
   for (var i = 0; i < colors.length; i++) {
     colors[i].addEventListener("click", function() {
       panelLeft.children[1].innerText = this.innerText;
@@ -122,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
+  // event for choosing a pattern and its price
   for (var i = 0; i < patterns.length; i++) {
     patterns[i].addEventListener("click", function() {
       panelLeft.children[2].innerText = this.innerText;
@@ -129,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   
+  // event for choosing a transport
+  // if you check a checkbox, you'll get a transport and its price
   checkbox.addEventListener("change", function() {
     if (checkbox.checked) {
       panelLeft.children[3].innerText = "Transport";
@@ -139,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
   
+  // function for calculating a whole price
   function calculatePrice() {
     var sum = 0;
     for (var i = 0; i < panelRight.children.length; i++) {
@@ -152,5 +175,6 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   calculatePrice();
+
   
 });

@@ -52,7 +52,7 @@ ul.menu {
 .submenu {
   clear: both;
   position: absolute;
-  top: 50px;
+  top: 40px;
   width: 130px;
   color: $color-header;
   line-height: 1.5;
@@ -68,7 +68,7 @@ ul.menu {
 
 .arrow {
   position: absolute;
-  top: 42px;
+  top: -20px;
   width: 0;
   height: 0;
   border-left: 15px solid transparent;

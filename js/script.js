@@ -80,11 +80,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // event for drop-down the drop-down list
   for (var i = 0; i < arrowCalc.length; i++) {
-	arrowCalc[i].addEventListener("click", function(event) {
-      //event.stopImmediatePropagation();
+	arrowCalc[i].addEventListener("click", function() {
       var next = this.nextElementSibling;
       
-      if (next.style.display === "none") {
+      if (next.style.display !== "block") {
           next.style.display = "block";
       } else {
           next.style.display = "none";
@@ -130,6 +129,8 @@ document.addEventListener("DOMContentLoaded", function() {
     chairTypes[i].addEventListener("click", function() {
       panelLeft.children[0].innerText = this.innerText;
       panelRight.children[0].innerText = this.dataset.price;
+      
+      calculatePrice();
     });
   }
   
@@ -138,6 +139,8 @@ document.addEventListener("DOMContentLoaded", function() {
     colors[i].addEventListener("click", function() {
       panelLeft.children[1].innerText = this.innerText;
       panelRight.children[1].innerText = this.dataset.price;
+      
+      calculatePrice();
     });
   }
   
@@ -146,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function() {
     patterns[i].addEventListener("click", function() {
       panelLeft.children[2].innerText = this.innerText;
       panelRight.children[2].innerText = this.dataset.price;
+      
+      calculatePrice();
     });
   }
   
@@ -159,6 +164,8 @@ document.addEventListener("DOMContentLoaded", function() {
       panelLeft.children[3].innerText = "Transport";
       panelRight.children[3].innerText = 0;
     }
+    
+    calculatePrice();
   });
   
   // function for calculating a whole price
@@ -166,15 +173,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var sum = 0;
     for (var i = 0; i < panelRight.children.length; i++) {
      if (panelRight.children[i].innerText !== "") {
-        sum += parseFLoat(panelRight.children[i].innerText);
+        sum += parseFloat(panelRight.children[i].innerText);
       } else {
-        sum = 0;
+        sum += 0;
       }
     }
     conclusion.innerText = sum + "zł";
   }
-  
-  calculatePrice();
-
   
 });
